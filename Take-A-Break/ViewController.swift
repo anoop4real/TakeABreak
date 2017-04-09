@@ -35,7 +35,7 @@ class ViewController: NSViewController {
     
     func setUp(){
         
-        maxTimerCount = 20
+        maxTimerCount = 20 * 60
         timerCount = 0
         customText.isHidden = true
         doneButton.isHidden = true
