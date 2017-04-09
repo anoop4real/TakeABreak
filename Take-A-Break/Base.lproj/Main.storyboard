@@ -168,6 +168,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="setText:" target="XfG-lQ-9wD" id="Hqf-VV-9H2"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tvt-PQ-GbE">
                                 <rect key="frame" x="268" y="120" width="52" height="25"/>
@@ -178,6 +181,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="doneText:" target="XfG-lQ-9wD" id="DhS-xh-57C"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Shn-43-gZb">
                                 <rect key="frame" x="64" y="43" width="96" height="25"/>
@@ -188,17 +194,23 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="stopTimer:" target="XfG-lQ-9wD" id="sPe-6r-IQw"/>
+                                </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4e1-iG-bra">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4e1-iG-bra">
                                 <rect key="frame" x="245" y="39" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BVR-N2-ieP">
+                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BVR-N2-ieP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="startTimer:" target="XfG-lQ-9wD" id="TeA-s1-xqY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="4e1-iG-bra" firstAttribute="leading" secondItem="Shn-43-gZb" secondAttribute="trailing" constant="91" id="02U-8G-q1n"/>
                             <constraint firstItem="Shn-43-gZb" firstAttribute="top" secondItem="zRZ-Pl-YeV" secondAttribute="bottom" constant="8" symbolic="YES" id="4A7-I6-HN0"/>
                             <constraint firstItem="chA-lW-uhK" firstAttribute="top" secondItem="ZDI-QE-qlH" secondAttribute="bottom" constant="22" id="CV0-hQ-WGk"/>
                             <constraint firstItem="ZDI-QE-qlH" firstAttribute="leading" secondItem="2FW-It-9CY" secondAttribute="leading" id="Muc-AD-yBb"/>
@@ -209,10 +221,12 @@
                             <constraint firstItem="Shn-43-gZb" firstAttribute="leading" secondItem="Fjq-sS-cat" secondAttribute="leading" id="cs1-Xk-Jpp"/>
                             <constraint firstItem="zRZ-Pl-YeV" firstAttribute="top" secondItem="chA-lW-uhK" secondAttribute="bottom" constant="16" id="eNl-d0-6Jd"/>
                             <constraint firstItem="2FW-It-9CY" firstAttribute="centerY" secondItem="zRZ-Pl-YeV" secondAttribute="centerY" id="gPu-bI-7N9"/>
+                            <constraint firstItem="4e1-iG-bra" firstAttribute="top" secondItem="Shn-43-gZb" secondAttribute="top" id="gTD-vW-b4T"/>
                             <constraint firstItem="zRZ-Pl-YeV" firstAttribute="leading" secondItem="2FW-It-9CY" secondAttribute="trailing" constant="8" symbolic="YES" id="gfD-kN-Mt5"/>
                             <constraint firstItem="zRZ-Pl-YeV" firstAttribute="top" secondItem="Tvt-PQ-GbE" secondAttribute="bottom" constant="8" symbolic="YES" id="nMo-5k-yK2"/>
                             <constraint firstItem="Fjq-sS-cat" firstAttribute="baseline" secondItem="chA-lW-uhK" secondAttribute="baseline" id="r7o-3u-etJ"/>
                             <constraint firstItem="zRZ-Pl-YeV" firstAttribute="leading" secondItem="chA-lW-uhK" secondAttribute="leading" id="uhc-KD-MuB"/>
+                            <constraint firstItem="4e1-iG-bra" firstAttribute="trailing" secondItem="Tvt-PQ-GbE" secondAttribute="trailing" id="vfI-eK-GrG"/>
                             <constraint firstItem="Tvt-PQ-GbE" firstAttribute="leading" secondItem="lYB-ix-nMz" secondAttribute="trailing" constant="50" id="vkW-7w-qFw"/>
                             <constraint firstItem="chA-lW-uhK" firstAttribute="leading" secondItem="Fjq-sS-cat" secondAttribute="trailing" constant="8" symbolic="YES" id="wkB-bk-3Vt"/>
                         </constraints>
@@ -220,6 +234,7 @@
                     <connections>
                         <outlet property="customText" destination="zRZ-Pl-YeV" id="Ohy-Sw-ln2"/>
                         <outlet property="doneButton" destination="Tvt-PQ-GbE" id="60L-YT-SfQ"/>
+                        <outlet property="timerLabel" destination="ZDI-QE-qlH" id="P1v-8Q-ZL1"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
